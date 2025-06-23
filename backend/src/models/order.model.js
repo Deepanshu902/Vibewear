@@ -10,6 +10,7 @@ const orderSchema = new mongoose.Schema({
          type:String,
          required:true,
          trim:true,
+         unique:true
       },
       totalAmount:{
          type:Number,
