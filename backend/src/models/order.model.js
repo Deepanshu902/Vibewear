@@ -27,7 +27,7 @@ const orderSchema = new mongoose.Schema({
          ref: "User",
          required: true
       },
-      item:{
+      items:{
          type:mongoose.Schema.Types.ObjectId,
          ref:"cart",
          required:true
