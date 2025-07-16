@@ -7,8 +7,8 @@ import {
     getCurrentUser,
     changeCurrentPassword,
 } from "../controllers/user.controller.js";
-import { verifyJWT, authorizeRoles } from "../middlewares/auth.middleware.js";
-import { upload } from "../middlewares/multer.middleware.js";
+import { verifyJWT, authorizeRoles } from "../middleware/auth.middleware.js";
+import { upload } from "../middleware/multer.middleware.js";
 
 const router = Router();
 

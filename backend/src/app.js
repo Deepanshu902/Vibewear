@@ -5,8 +5,8 @@ import {rateLimit} from "express-rate-limit"
 
 const app = express();
 const limiter = rateLimit({
-	windowMs: 10 * 60 * 1000, // 10 minutes
-	limit: 50, // Limit each IP is 20
+	windowMs: 10 * 60 * 1000, // 10 min
+	limit: 100, 
 	standardHeaders: 'draft-8', 
 	legacyHeaders: false, 
 	
@@ -32,10 +32,17 @@ app.get("/healthz", (req, res) => {
 
 import userRoutes from "./routes/user.routes.js";
 import cartRoutes from "./routes/cart.routes.js";
+import reviewRoutes from "./routes/review.routes.js";
+import productRoutes from "./routes/product.routes.js";
+import orderRoutes from "./routes/order.routes.js";
+import paymentRoutes from "./routes/payment.routes.js";
 
 app.use("/api/v1/users", userRoutes);
 app.use("/api/v1/cart", cartRoutes);
-
+app.use("/api/v1/reviews", reviewRoutes);
+app.use("/api/v1/products", productRoutes);
+app.use("/api/v1/orders", orderRoutes);
+app.use("/api/v1/payments", paymentRoutes);
 
 
 

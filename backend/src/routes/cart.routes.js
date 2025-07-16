@@ -6,7 +6,7 @@ import {
     getCart,
     clearCart
 } from "../controllers/cart.controller.js";
-import { verifyJWT, authorizeRoles } from "../middlewares/auth.middleware.js";
+import { verifyJWT, authorizeRoles } from "../middleware/auth.middleware.js";
 
 const router = Router();
 
